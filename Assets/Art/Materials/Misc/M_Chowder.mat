@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Holoclaw
-  m_Shader: {fileID: -6465566751694194690, guid: 7bb84ffd0222b1b4890dc2c1a1769ee0, type: 3}
-  m_Parent: {fileID: 2100000, guid: 9b539446ad0ae4f45b11ec4dc8ff8f81, type: 2}
+  m_Name: M_Chowder
+  m_Shader: {fileID: -6465566751694194690, guid: 05bb1db7b1ee20b48943d1f75f1ad466, type: 3}
+  m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -23,18 +23,29 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Albedo:
-        m_Texture: {fileID: 2800000, guid: 020001140b34fa54f9fb707c216ea15b, type: 3}
+    - _SampleTexture2D_bcf8acf5884f42aa9e5aff22b981dc0b_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: a3ef48728ad23104a9c9d95d803ecb72, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _UsesTextureBase: 1
-    - _UsesTextureColor: 0
-    m_Colors:
-    - _AlphaRange: {r: 0.75, g: 1, b: 0, a: 0}
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors: []
   m_BuildTextureStacks: []
---- !u!114 &6543874127698808307
+--- !u!114 &8517576424389068464
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

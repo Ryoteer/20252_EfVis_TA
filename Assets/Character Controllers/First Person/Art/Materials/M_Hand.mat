@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_HighResWater
-  m_Shader: {fileID: -6465566751694194690, guid: 94af998e3b5bcbc4a915f177055a3b32, type: 3}
-  m_Parent: {fileID: 2100000, guid: 3c8053c799cd02a49b7a3a9d2bfa949a, type: 2}
+  m_Name: M_Hand
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Parent: {fileID: 2100000, guid: 42305027f9325f84d8628965b57af2e2, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -17,7 +17,8 @@ Material:
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -25,18 +26,12 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _DistortionIntensity: 0.5
-    - _WaveAmount: 0.25
-    - _WaveIntensity: 0.5
+    - _Smoothness: 0.25
     m_Colors:
-    - _DistortionXOffset: {r: 0, g: 0.025, b: 0, a: 0}
-    - _DistortionXTiling: {r: 1, g: 1, b: 0, a: 0}
-    - _DistortionYOffset: {r: 0, g: 0.005, b: 0, a: 0}
-    - _DistortionYTiling: {r: 1, g: 1, b: 0, a: 0}
-    - _WaterOffset: {r: 0, g: 0.00125, b: 0, a: 0}
-    - _WaterTiling: {r: 5, g: 5, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 0.85169345, b: 0.740566, a: 1}
+    - _Color: {r: 1, g: 0.85169345, b: 0.740566, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &401633700449440082
+--- !u!114 &6880040209544755811
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

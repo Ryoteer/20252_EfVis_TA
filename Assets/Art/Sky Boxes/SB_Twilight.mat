@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_HighResWater
-  m_Shader: {fileID: -6465566751694194690, guid: 94af998e3b5bcbc4a915f177055a3b32, type: 3}
-  m_Parent: {fileID: 2100000, guid: 3c8053c799cd02a49b7a3a9d2bfa949a, type: 2}
+  m_Name: SB_Twilight
+  m_Shader: {fileID: -6465566751694194690, guid: c6f1a6a6de0d74f4eb5e20d462610f90, type: 3}
+  m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -22,21 +22,33 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DistortionIntensity: 0.5
-    - _WaveAmount: 0.25
-    - _WaveIntensity: 0.5
+    - _GroundBlendPower: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _SkyBlendPower: 1.5
+    - _StarsAmount: 1
     m_Colors:
-    - _DistortionXOffset: {r: 0, g: 0.025, b: 0, a: 0}
-    - _DistortionXTiling: {r: 1, g: 1, b: 0, a: 0}
-    - _DistortionYOffset: {r: 0, g: 0.005, b: 0, a: 0}
-    - _DistortionYTiling: {r: 1, g: 1, b: 0, a: 0}
-    - _WaterOffset: {r: 0, g: 0.00125, b: 0, a: 0}
-    - _WaterTiling: {r: 5, g: 5, b: 0, a: 0}
+    - _GroundColor: {r: 0.8773585, g: 0.3609886, b: 0.120016, a: 1}
+    - _HorizonColor: {r: 0.509434, g: 0, b: 0.3637957, a: 1}
+    - _SkyColor: {r: 0.08319832, g: 0.0240299, b: 0.1886792, a: 1}
+    - _StarsColor: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &401633700449440082
+--- !u!114 &6866339725679130049
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PP_ColorMask
-  m_Shader: {fileID: -6465566751694194690, guid: fdbb4166e4584ed4596a29176e54c5ac, type: 3}
+  m_Name: PP_Vignette
+  m_Shader: {fileID: -6465566751694194690, guid: 73774689d45f37241b5514850d3ba1ea, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -37,12 +37,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Fuzziness: 0.1
-    - _IsMaskActive: 0
-    - _IsTintScreenActive: 1
-    - _Range: 0.5
-    - _Saturation: 1.125
+    - _Frequency: 10
+    - _Intensity: 0
+    - _LinesOpacity: 0
+    - _LinesWidth: 1
+    - _VignetteScale: 0.3
+    - _VignetteSharpness: 0
     m_Colors:
-    - _MaskColor: {r: 1, g: 1, b: 0, a: 0}
-    - _TintColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _VignetteColor: {r: 0, g: 0.4871597, b: 1, a: 0}
+    - _VignetteColorA: {r: 0, g: 0, b: 0, a: 0}
+    - _VignetteColorB: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

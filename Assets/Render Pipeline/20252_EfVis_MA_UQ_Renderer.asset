@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7492121621503493266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
+  m_Name: Distortion
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  passMaterial: {fileID: 2100000, guid: 3ef97de39517eb34981a32ec7f8bf2de, type: 2}
+  injectionPoint: 600
+  requirements: 4
+  passIndex: 0
 --- !u!114 &-7267157356346966374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   passMaterial: {fileID: 2100000, guid: b9d5395bd20f67e44875f2b362649aca, type: 2}
-  injectionPoint: 550
+  injectionPoint: 600
   requirements: 4
   passIndex: 0
 --- !u!114 &11400000
@@ -50,9 +67,13 @@ MonoBehaviour:
     debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7, type: 3}
     hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
   m_RendererFeatures:
+  - {fileID: 5670483810945188832}
+  - {fileID: 8859148460521701825}
+  - {fileID: -7492121621503493266}
   - {fileID: -5558816710872572407}
   - {fileID: -7267157356346966374}
-  m_RendererFeatureMap: 095eef40a71ddbb29a7e1230e3de259b
+  - {fileID: 8057004051472468875}
+  m_RendererFeatureMap: e0c3fd87fb9ab14ec141d8499604f27a6ebb428814a30698095eef40a71ddbb29a7e1230e3de259b8b4be6397f3ad06f
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -91,3 +112,54 @@ MonoBehaviour:
   m_CopyDepthMode: 1
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 1
+--- !u!114 &5670483810945188832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
+  m_Name: Outlines
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  passMaterial: {fileID: 2100000, guid: b3c44e8f9461405419ee51104ada520f, type: 2}
+  injectionPoint: 550
+  requirements: 4
+  passIndex: 0
+--- !u!114 &8057004051472468875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
+  m_Name: Vignette
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  passMaterial: {fileID: 2100000, guid: e7aa5432aa2ec6449bcafb33d9124b00, type: 2}
+  injectionPoint: 600
+  requirements: 4
+  passIndex: 0
+--- !u!114 &8859148460521701825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
+  m_Name: VolumetricFog
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  passMaterial: {fileID: 2100000, guid: 3abedccd386b8df489875c0b12d7dedc, type: 2}
+  injectionPoint: 550
+  requirements: 4
+  passIndex: 0

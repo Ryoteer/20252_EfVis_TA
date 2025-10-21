@@ -17,23 +17,6 @@ MonoBehaviour:
   injectionPoint: 600
   requirements: 4
   passIndex: 0
---- !u!114 &-7300693602146680477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
-  m_Name: Dithering
-  m_EditorClassIdentifier: 
-  m_Active: 0
-  passMaterial: {fileID: 2100000, guid: 0b97e69015aa3e84b867fc06f5c99abd, type: 2}
-  injectionPoint: 600
-  requirements: 4
-  passIndex: 0
 --- !u!114 &-7267157356346966374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,7 +61,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de640fe3d0db1804a85f9fc8f5cadab6, type: 3}
-  m_Name: 20252_EfVis_MA_UQ_Renderer
+  m_Name: 20252_EfVis_MA_UQ_Hand_Renderer
   m_EditorClassIdentifier: 
   debugShaders:
     debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7, type: 3}
@@ -90,8 +73,7 @@ MonoBehaviour:
   - {fileID: -5558816710872572407}
   - {fileID: -7267157356346966374}
   - {fileID: 8057004051472468875}
-  - {fileID: -7300693602146680477}
-  m_RendererFeatureMap: e0c3fd87fb9ab14ec141d8499604f27a6ebb428814a30698095eef40a71ddbb29a7e1230e3de259b8b4be6397f3ad06f6381147ed9b9ae9a
+  m_RendererFeatureMap: e0c3fd87fb9ab14ec141d8499604f27a6ebb428814a30698095eef40a71ddbb29a7e1230e3de259b8b4be6397f3ad06f
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -159,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
   m_Name: Vignette
   m_EditorClassIdentifier: 
-  m_Active: 0
+  m_Active: 1
   passMaterial: {fileID: 2100000, guid: e7aa5432aa2ec6449bcafb33d9124b00, type: 2}
   injectionPoint: 600
   requirements: 4
@@ -176,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
   m_Name: VolumetricFog
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   passMaterial: {fileID: 2100000, guid: 3abedccd386b8df489875c0b12d7dedc, type: 2}
   injectionPoint: 550
   requirements: 4

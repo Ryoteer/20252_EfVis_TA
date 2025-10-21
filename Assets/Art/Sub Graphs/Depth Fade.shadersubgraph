@@ -236,7 +236,7 @@
     },
     "m_Path": "Sub Graphs",
     "m_GraphPrecision": 1,
-    "m_PreviewMode": 2,
+    "m_PreviewMode": 1,
     "m_OutputNode": {
         "m_Id": "82318f184fa448179006e4d739877bef"
     },

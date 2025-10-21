@@ -33,8 +33,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7406513219641235969}
   - {fileID: 1493162902744487772}
+  - {fileID: 7406513219641235969}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &4002566311577166895
@@ -69,7 +69,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 90
   orthographic: 0
   orthographic size: 5
@@ -112,7 +112,8 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
-  m_Cameras: []
+  m_Cameras:
+  - {fileID: 1199390714095875843}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
@@ -219,7 +220,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 90
   orthographic: 0
   orthographic size: 5
@@ -253,9 +254,9 @@ MonoBehaviour:
   m_RenderShadows: 1
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
+  m_CameraType: 1
   m_Cameras: []
-  m_RendererIndex: -1
+  m_RendererIndex: 1
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1

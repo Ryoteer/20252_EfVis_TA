@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 [RequireComponent(typeof(Rigidbody))]
 public class ThirdPersonCharacter : MonoBehaviour
@@ -12,6 +13,8 @@ public class ThirdPersonCharacter : MonoBehaviour
     [SerializeField] private string _zFloatName = "zAxis";
 
     [Header("<color=#997570>Inputs</color>")]
+    [SerializeField] private KeyCode _activateKey = KeyCode.Q;
+    [SerializeField] private KeyCode _elementKey = KeyCode.E;
     [SerializeField] private KeyCode _interactKey = KeyCode.F;
     [SerializeField] private KeyCode _jumpKey = KeyCode.Space;
 
@@ -23,18 +26,31 @@ public class ThirdPersonCharacter : MonoBehaviour
     [SerializeField] private float _groundDistance = 0.25f;
     [SerializeField] private LayerMask _groundMask;
     [SerializeField] private float _interactDistance = 2.0f;
-    [SerializeField] private float _interactRadius =0.5f;
+    [SerializeField] private float _interactRadius = 0.5f;
     [SerializeField] private LayerMask _interactMask;
 
-    private Vector3 _dir = new(), _dirFix = new(), _cameraForwardFix = new(), _cameraRightFix = new(), _groundOffset = new();
+    [Header("<color=#997570>Renderer</color>")]
+    [SerializeField] private Renderer _magicSwordRenderer;
+    [SerializeField] private float _auraTransitionTime = 1.0f;
+    [SerializeField] private string _auraFloatName = "_AuraAmount";
+    [SerializeField] private string _auraColorName = "_AuraColor";
+    [SerializeField] private Animator _swordAnimator;
+    [SerializeField] private string _stateBoolName = "isActivated";
+    [SerializeField] private VisualEffect _magicSwordVFX;
+    [SerializeField] private string _auraVFXColorName = "AuraBaseColor";
+
+    private bool _isSwordEnabled = false, _isChangingElement = false;    
 
     private Animator _animator;
+    private Material _swordMaterial;
     private Rigidbody _rb;
     private ThirdPersonCamera _camera;
     private Transform _cameraTransform;
 
+    private Color _actualColor, _newColor;    
     private Ray _groundRay, _interactRay;
     private RaycastHit _interactHit;
+    private Vector3 _dir = new(), _dirFix = new(), _cameraForwardFix = new(), _cameraRightFix = new(), _groundOffset = new();
 
     private void Awake()
     {
@@ -45,6 +61,11 @@ public class ThirdPersonCharacter : MonoBehaviour
     private void Start()
     {
         _animator = GetComponentInChildren<Animator>();
+
+        _swordMaterial = _magicSwordRenderer.material;
+
+        _actualColor = _swordMaterial.GetColor(_auraColorName);
+        _magicSwordVFX.SetVector4(_auraVFXColorName, _actualColor);
 
         _cameraTransform = Camera.main.transform;
         _camera= Camera.main.GetComponentInParent<ThirdPersonCamera>();
@@ -60,6 +81,16 @@ public class ThirdPersonCharacter : MonoBehaviour
         if (Input.GetKeyDown(_interactKey))
         {
             Interaction();
+        }
+        else if(Input.GetKeyDown(_elementKey) && !_isChangingElement)
+        {
+            StartCoroutine(AuraChange());
+        }
+        else if (Input.GetKeyDown(_activateKey))
+        {
+            _isSwordEnabled = !_isSwordEnabled;
+
+            _swordAnimator.SetBool(_stateBoolName, _isSwordEnabled);
         }
 
         _animator.SetBool(_airBoolName, IsOnAir());
@@ -77,6 +108,31 @@ public class ThirdPersonCharacter : MonoBehaviour
         {
             Movement(_dir);
         }
+    }
+
+    private IEnumerator AuraChange()
+    {
+        _isChangingElement = true;
+
+        _newColor = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), 1.0f);
+
+        float t = 0.0f;
+
+        while(t < 1.0f)
+        {
+            t += Time.deltaTime / _auraTransitionTime;
+
+            _swordMaterial.SetColor(_auraColorName, Color.Lerp(_actualColor, _newColor, t));
+            _magicSwordVFX.SetVector4(_auraVFXColorName, Color.Lerp(_actualColor, _newColor, t));
+
+            yield return null;
+        }
+
+        _magicSwordVFX.SendEvent("OnAuraChange");
+
+        _actualColor = _newColor;
+
+        _isChangingElement = false;
     }
 
     private void Interaction()

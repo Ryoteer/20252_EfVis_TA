@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 441782976924889670, guid: 0bfdbeac43dfdf147b9d736c5d06d9dd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4631617287061172361, guid: 0bfdbeac43dfdf147b9d736c5d06d9dd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -468,7 +468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7935621705294624109, guid: 80a2dabc6cf37f04a89162a89b6698e9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -769,7 +769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 225575445474713242, guid: 9e71a85dcfd63f944ab3aee952cc8842, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 597715847016325953, guid: 9e71a85dcfd63f944ab3aee952cc8842, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1020,17 +1020,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6170659795631521440, guid: d732cbba8af02ec40b355a8cad0e574c, type: 3}
-      propertyPath: far clip plane
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 8664190898909292149, guid: d732cbba8af02ec40b355a8cad0e574c, type: 3}
       propertyPath: m_Name
       value: Spring Arm
       objectReference: {fileID: 0}
     - target: {fileID: 8664190898909292149, guid: d732cbba8af02ec40b355a8cad0e574c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -38,6 +38,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     [SerializeField] private string _stateBoolName = "isActivated";
     [SerializeField] private VisualEffect _magicSwordVFX;
     [SerializeField] private string _auraVFXColorName = "AuraBaseColor";
+    [SerializeField] private string _trailVFXColorName = "TrailBaseColor";
 
     private bool _isSwordEnabled = false, _isChangingElement = false;    
 
@@ -82,7 +83,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         {
             Interaction();
         }
-        else if(Input.GetKeyDown(_elementKey) && !_isChangingElement)
+        else if(Input.GetKeyDown(_elementKey) && _isSwordEnabled && !_isChangingElement)
         {
             StartCoroutine(AuraChange());
         }
@@ -124,6 +125,7 @@ public class ThirdPersonCharacter : MonoBehaviour
 
             _swordMaterial.SetColor(_auraColorName, Color.Lerp(_actualColor, _newColor, t));
             _magicSwordVFX.SetVector4(_auraVFXColorName, Color.Lerp(_actualColor, _newColor, t));
+            _magicSwordVFX.SetVector4(_trailVFXColorName, Color.Lerp(_actualColor, _newColor, t));
 
             yield return null;
         }
